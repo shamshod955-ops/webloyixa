@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #311042);
+            color: #f8fafc;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Orqa fondagi yorug'lik effektlari (Blurs) */
+        .blob {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: rgba(99, 102, 241, 0.25);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .blob-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(236, 72, 153, 0.2);
+            filter: blur(80px);
+            border-radius: 50%;
+            bottom: 10%;
+            right: 10%;
+            z-index: -1;
+        }
+
+        /* Asosiy konteyner */
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #818cf8, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Tugmalar paneli (Glassmorphism) */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
